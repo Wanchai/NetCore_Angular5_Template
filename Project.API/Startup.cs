@@ -19,8 +19,6 @@ namespace Project.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<ProjectDbContext>(options =>
-            //        options.UseSqlite("Data Source=C:\\DevProj\\Portal\\Portal.db", b => b.MigrationsAssembly("Portal.API")));
             services.AddDbContext<ProjectDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
 
